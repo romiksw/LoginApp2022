@@ -14,6 +14,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameTF.delegate = self
+        passwordTF.delegate = self
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,5 +63,18 @@ extension LoginViewController {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            userNameTF.resignFirstResponder()
+            passwordTF.becomeFirstResponder()
+        } else {
+            passwordTF.resignFirstResponder()
+            loginAction()
+        }
+        return false
     }
 }
