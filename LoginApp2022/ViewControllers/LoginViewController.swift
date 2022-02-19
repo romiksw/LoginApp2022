@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    let user = User.getUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,8 +22,16 @@ class LoginViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            }
+        }
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.userName = userNameTF.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,10 +80,8 @@ extension LoginViewController {
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTF {
-            userNameTF.resignFirstResponder()
             passwordTF.becomeFirstResponder()
         } else {
-            passwordTF.resignFirstResponder()
             loginAction()
         }
         return false

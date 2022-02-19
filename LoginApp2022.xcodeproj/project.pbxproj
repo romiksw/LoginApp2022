@@ -14,6 +14,7 @@
 		F199C6B327B6D36F006DE41A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F199C6B127B6D36F006DE41A /* LaunchScreen.storyboard */; };
 		F199C6BB27B6E14D006DE41A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199C6BA27B6E14D006DE41A /* WelcomeViewController.swift */; };
 		F199C6BD27B6E168006DE41A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199C6BC27B6E168006DE41A /* LoginViewController.swift */; };
+		F199C6C427C18BD9006DE41A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F199C6C327C18BD9006DE41A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F199C6B427B6D36F006DE41A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F199C6BA27B6E14D006DE41A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F199C6BC27B6E168006DE41A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F199C6C327C18BD9006DE41A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		F199C6A527B6D36D006DE41A /* LoginApp2022 */ = {
 			isa = PBXGroup;
 			children = (
-				F199C6A627B6D36D006DE41A /* AppDelegate.swift */,
-				F199C6A827B6D36D006DE41A /* SceneDelegate.swift */,
-				F199C6AC27B6D36D006DE41A /* Main.storyboard */,
-				F199C6BA27B6E14D006DE41A /* WelcomeViewController.swift */,
-				F199C6BC27B6E168006DE41A /* LoginViewController.swift */,
-				F199C6AF27B6D36F006DE41A /* Assets.xcassets */,
-				F199C6B127B6D36F006DE41A /* LaunchScreen.storyboard */,
-				F199C6B427B6D36F006DE41A /* Info.plist */,
+				F199C6BE27C18A38006DE41A /* ViewControllers */,
+				F199C6C227C18ADD006DE41A /* Models */,
+				F199C6BF27C18A6C006DE41A /* Storyboards */,
+				F199C6C027C18AAE006DE41A /* Supporting */,
+				F199C6C127C18AC6006DE41A /* Resources */,
 			);
 			path = LoginApp2022;
+			sourceTree = "<group>";
+		};
+		F199C6BE27C18A38006DE41A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F199C6BA27B6E14D006DE41A /* WelcomeViewController.swift */,
+				F199C6BC27B6E168006DE41A /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F199C6BF27C18A6C006DE41A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F199C6AC27B6D36D006DE41A /* Main.storyboard */,
+				F199C6B127B6D36F006DE41A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F199C6C027C18AAE006DE41A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				F199C6A627B6D36D006DE41A /* AppDelegate.swift */,
+				F199C6A827B6D36D006DE41A /* SceneDelegate.swift */,
+				F199C6B427B6D36F006DE41A /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		F199C6C127C18AC6006DE41A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F199C6AF27B6D36F006DE41A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F199C6C227C18ADD006DE41A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F199C6C327C18BD9006DE41A /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +186,7 @@
 				F199C6BD27B6E168006DE41A /* LoginViewController.swift in Sources */,
 				F199C6BB27B6E14D006DE41A /* WelcomeViewController.swift in Sources */,
 				F199C6A727B6D36D006DE41A /* AppDelegate.swift in Sources */,
+				F199C6C427C18BD9006DE41A /* User.swift in Sources */,
 				F199C6A927B6D36D006DE41A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YPMYLMA7GS;
-				INFOPLIST_FILE = LoginApp2022/Info.plist;
+				INFOPLIST_FILE = LoginApp2022/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YPMYLMA7GS;
-				INFOPLIST_FILE = LoginApp2022/Info.plist;
+				INFOPLIST_FILE = LoginApp2022/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

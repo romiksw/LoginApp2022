@@ -75,14 +75,14 @@
                     <connections>
                         <outlet property="passwordTF" destination="Uvg-oh-9q5" id="6lI-an-HRq"/>
                         <outlet property="userNameTF" destination="ubP-Rb-gdT" id="Sce-YS-CyL"/>
-                        <segue destination="Es5-oo-KmC" kind="presentation" identifier="showWelcomeIdentifier" modalPresentationStyle="fullScreen" id="5JL-cp-B6x"/>
+                        <segue destination="eON-tp-bJQ" kind="presentation" identifier="showWelcomeIdentifier" modalPresentationStyle="fullScreen" id="5JL-cp-B6x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19" y="89"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Item-->
         <scene sceneID="ITB-VY-6HH">
             <objects>
                 <viewController id="Es5-oo-KmC" customClass="WelcomeViewController" customModule="LoginApp2022" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcV-Ml-mJ6">
-                                <rect key="frame" x="154" y="496" width="67" height="36"/>
+                                <rect key="frame" x="154" y="447" width="67" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
@@ -114,6 +114,7 @@
                             <constraint firstItem="bcV-Ml-mJ6" firstAttribute="centerX" secondItem="Cke-MS-4HL" secondAttribute="centerX" id="e3V-KJ-hso"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="NjD-C7-Hax"/>
                     <navigationItem key="navigationItem" id="5mZ-HC-Gub"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="oCq-oU-oOC" id="ZbL-cR-CL1"/>
@@ -122,7 +123,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSn-Ga-oEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9Or-Bl-qHT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="750" y="89"/>
+            <point key="canvasLocation" x="1546" y="89"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="F3c-29-Fxh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eON-tp-bJQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m96-4N-Dvh">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Es5-oo-KmC" kind="relationship" relationship="viewControllers" id="Hfl-1F-mrL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdX-gN-0OI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="88.605697151424295"/>
         </scene>
     </scenes>
 </document>
