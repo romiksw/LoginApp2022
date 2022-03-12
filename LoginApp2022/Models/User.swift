@@ -14,13 +14,18 @@ struct User {
     let personInformation: Person
     
     static func getUser() -> User {
-        User(personInformation: Person(name: "Roma", surname: "Kozlov"))
+        User(personInformation: Person(name: "Roman", surname: "Kozlov", age: 25, townBirth: "Moscow", yearOfBirth: 1997))
     }
 }
 
 struct Person {
     let name: String
     let surname: String
+    
+    let age: Int
+    let townBirth: String
+    
+    let yearOfBirth: Int
     
     var fullName: String {
         "\(name) \(surname)"

@@ -28,10 +28,16 @@ class LoginViewController: UIViewController {
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let aboutUserVC = navigationVC.topViewController as?
+                        AboutUserViewController else { return }
+                aboutUserVC.user = user
+                //aboutUserVC.title = user.personInformation.fullName
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let moreInfoVC = navigationVC.viewControllers[1] as? MoreInfoViewController else { return }
+                moreInfoVC.user = user
             }
         }
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.userName = userNameTF.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
